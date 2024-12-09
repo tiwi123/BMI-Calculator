@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi IMT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Prediksi Indeks Massa Tubuh (IMT)</h1>
+        <form action="/calculate" method="post">
+            <div class="form-group">
+                <label for="weight">Berat Badan (kg):</label>
+                <input type="number" step="0.1" class="form-control" id="weight" name="weight" required>
+            </div>
+            <div class="form-group">
+                <label for="height">Tinggi Badan (m):</label>
+                <input type="number" step="0.01" class="form-control" id="height" name="height" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Hitung IMT</button>
+        </form>
+
+        <div class="mt-4">
+            <h3>Hasil:</h3>
+            <div id="result">
+                <p th:text="${result}"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
